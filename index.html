@@ -131,7 +131,7 @@
     }
 
     // Charger points.geoJSON
-    fetch("points.geoJSON").then(r=>r.ok?r.json():Promise.reject("Impossible de charger points.geoJSON"))
+    fetch("https://github.com/oliviachampoux/biodiv_ecrins/blob/main/points.geojson").then(r=>r.ok?r.json():Promise.reject("Impossible de charger points.geoJSON"))
       .then(data=>{
         const geojsonPoints = L.geoJSON(data, {
           pointToLayer: (f, latlng)=>{
@@ -189,4 +189,5 @@
   </script>
 </body>
 </html>
+
 
